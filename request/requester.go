@@ -11,10 +11,10 @@ type ResponseData struct {
 	StatusText string `json:"StatusText"`
 }
 
-func GetStatus() (string, error) {
+func GetStatusFiveYears(code string) (string, error) {
 	kdMidURL := env.Get("KD_MID_URL")
 
-	url := kdMidURL
+	url := kdMidURL + code
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
