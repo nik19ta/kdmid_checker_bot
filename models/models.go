@@ -6,10 +6,10 @@ import (
 
 type Request struct {
 	ID                uuid.UUID `gorm:"type:uuid;"`        // * ID
-	UserID            int64     `gorm:"type:integer"`      // * Id юзера в телеграмме
-	ApplicationNumber string    `gorm:"type:integer"`      // * Номер заявления
-	CityID            int       `gorm:"type:integer"`      // * Id города
-	NumberChecksToday int       `gorm:"type:integer"`      // * Предыдущий статус заявления
-	PassportType      string    `gorm:"type:varchar(255)"` // * Тип паспорта, 10 или 5 лет
-	Status            string    `gorm:"type:varchar(255)"` // * Предыдущий статус заявления
+	UserID            int64     `gorm:"type:integer"`      // * Telegram User ID
+	ApplicationNumber string    `gorm:"type:integer"`      // * Application Number
+	CityID            int       `gorm:"type:integer"`      // * City ID
+	NumberChecksToday int       `gorm:"type:integer"`      // * Previous Application Status
+	PassportType      string    `gorm:"type:varchar(255)"` // * Passport Type (10 or 5 years)
+	Status            string    `gorm:"type:varchar(255)"` // * Previous Application Status
 }
