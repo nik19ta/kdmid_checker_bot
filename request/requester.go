@@ -3,7 +3,7 @@ package request
 import (
 	"encoding/json"
 	"io/ioutil"
-	"kmid_checker/utils/env"
+	"kmid_checker/pkg/env"
 	"net/http"
 )
 

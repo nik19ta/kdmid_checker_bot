@@ -4,7 +4,7 @@ import (
 	"log"
 	"strconv"
 
-	env "kmid_checker/utils/env"
+	env "kmid_checker/pkg/env"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 )
