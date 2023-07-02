@@ -4,7 +4,7 @@ import (
 	models "kmid_checker/models"
 	"log"
 
-	requestPackege "kmid_checker/request"
+	requestPackage "kmid_checker/modules/request"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	i18n "github.com/nicksnyder/go-i18n/v2/i18n"
@@ -46,7 +46,7 @@ func CheckStatus(db *gorm.DB, bot *tgbotapi.BotAPI, localizer *i18n.Localizer) {
 
 		// * Check if the status has changed for passports valid for 5 years.
 		if request.PassportType == "5" {
-			status, err := requestPackege.GetStatusFiveYears(request.ApplicationNumber)
+			status, err := requestPackage.GetStatusFiveYears(request.ApplicationNumber)
 
 			if err != nil {
 				log.Println(err)

@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	botPackage "kmid_checker/bot"
-	corn "kmid_checker/corn"
+	botPackage "kmid_checker/modules/bot"
+	corn "kmid_checker/modules/corn"
 	database "kmid_checker/pkg/database"
 	env "kmid_checker/pkg/env"
 

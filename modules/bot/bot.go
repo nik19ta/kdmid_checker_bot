@@ -4,7 +4,7 @@ import (
 	"kmid_checker/models"
 	"log"
 
-	requestPackege "kmid_checker/request"
+	requestPackage "kmid_checker/modules/request"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/google/uuid"
@@ -187,7 +187,7 @@ func Init(db *gorm.DB, bot *tgbotapi.BotAPI, localizer *i18n.Localizer) {
 				// * If the passport is valid for 5 years
 				if request.PassportType == "5" && request.ApplicationNumber == "0" {
 
-					status, err := requestPackege.GetStatusFiveYears(update.Message.Text)
+					status, err := requestPackage.GetStatusFiveYears(update.Message.Text)
 
 					if err != nil {
 						finishMsg := tgbotapi.NewMessage(update.Message.Chat.ID,
@@ -263,7 +263,7 @@ func Init(db *gorm.DB, bot *tgbotapi.BotAPI, localizer *i18n.Localizer) {
 						bot.Send(finishMsg)
 					} else if request.CityID == 0 {
 
-						cityID, err := requestPackege.GetCityIdByName(update.Message.Text)
+						cityID, err := requestPackage.GetCityIdByName(update.Message.Text)
 
 						if err != nil {
 							errorMsg := tgbotapi.NewMessage(update.Message.Chat.ID,
