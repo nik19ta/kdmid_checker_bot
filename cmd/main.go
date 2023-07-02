@@ -55,5 +55,5 @@ func main() {
 	r.GET("/example", func(ctx *gin.Context) {
 		log.Println("/example")
 	})
-	r.Run(":3000")
+	r.Run(env.Get("PORT"))
 }
