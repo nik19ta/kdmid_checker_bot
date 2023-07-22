@@ -14,8 +14,8 @@ services:
       - POSTGRES_HOST=db
       - POSTGRES_USER=author
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB_NAME=kdmid_checker
-      - POSTGRES_PORT=5432  # <-- Исправленный порт
+      - POSTGRES_DB_NAME=postgres
+      - POSTGRES_PORT=5432
       - POSTGRES_SSL_MODE=disable
       - POSTGRES_TIMEZONE=Europe/Moscow
 
