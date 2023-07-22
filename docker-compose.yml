@@ -12,9 +12,9 @@ services:
         condition: service_healthy
     environment:
       - POSTGRES_HOST=db
-      - POSTGRES_USER=author
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB_NAME=kdmid_checker
       - POSTGRES_PORT=5432
       - POSTGRES_SSL_MODE=disable
       - POSTGRES_TIMEZONE=Europe/Moscow
